@@ -1,0 +1,22 @@
+{
+  "name": "Email Tracker Detector",
+  "description": "Detects common Gmail read-tracking systems.",
+  "version": "0.0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://inbox.google.com/*"
+      ],
+      "js": ["inboxsdk.js", "content.js"],
+      "css": ["style.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "https://mail.google.com/",
+    "https://inbox.google.com/"
+  ],
+  "manifest_version": 2,
+  "web_accessible_resources": ["icon.png"]
+}

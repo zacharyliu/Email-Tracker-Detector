@@ -1,0 +1,4 @@
+.background-contain-and-center {
+    background-size: contain !important;
+    background-position: center !important;
+}
